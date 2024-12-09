@@ -1,0 +1,25 @@
+---
+services:
+  webtop:
+    image: lscr.io/linuxserver/webtop:ubuntu-openbox
+    container_name: webtop-ubuntu-openbox
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - D:/Docker/webtop-ubuntu-openbox/data:/config
+    ports:
+      - 37479:3000
+      - 32148:3001
+    devices:
+      - /dev/dri:/dev/dri
+    shm_size: "1gb"
+    restart: unless-stopped
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [compute,video,graphics,utility]
