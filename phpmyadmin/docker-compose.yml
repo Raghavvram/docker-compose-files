@@ -6,7 +6,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Etc/UTC
+      - TZ=Asia/Kolkata
     volumes:
       - ~/Docker/phpmyadmin/config:/config
     ports:
