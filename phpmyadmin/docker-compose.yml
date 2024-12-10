@@ -8,7 +8,7 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
     volumes:
-      - D:/Docker/phpmyadmin/config:/config
+      - ~/Docker/phpmyadmin/config:/config
     ports:
       - 20938:80
     restart: unless-stopped
