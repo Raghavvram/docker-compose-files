@@ -10,7 +10,7 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
     volumes:
-      - D:/Docker/mysqlworkbench/config:/config
+      - ~/Docker/mysqlworkbench/config:/config
     ports:
       - 54045:3000
       - 24141:3001
