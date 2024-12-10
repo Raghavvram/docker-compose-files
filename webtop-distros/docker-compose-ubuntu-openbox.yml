@@ -6,9 +6,9 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Etc/UTC
+      - TZ=Asia/Kolkata
     volumes:
-      - D:/Docker/webtop-ubuntu-openbox/data:/config
+      - ~/Docker/webtop-ubuntu-openbox/data:/config
     ports:
       - 37479:3000
       - 32148:3001
