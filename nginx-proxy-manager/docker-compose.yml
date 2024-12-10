@@ -7,5 +7,5 @@ services:
       - '9181:81'
       - '9190:443'
     volumes:
-      - D:/Docker/nginxPM/data:/data
-      - D:/Docker/nginxPM/letsencrypt:/etc/letsencrypt
+      - ~/Docker/nginxPM/data:/data
+      - ~/Docker/nginxPM/letsencrypt:/etc/letsencrypt
