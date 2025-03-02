@@ -1,4 +1,3 @@
-
 ### Issue 1: `nvidia-ctk` command not found
 The `nvidia-ctk` command is part of the NVIDIA Container Toolkit. To install it on Arch Linux, you can follow these steps:
 
@@ -19,5 +18,3 @@ Arch Linux uses `systemd` instead of the traditional `service` command. To resta
    ```sh
    sudo systemctl restart docker
    ```
-
-These steps should help you resolve the issues you're facing. If you encounter any further problems, feel free to ask!
