@@ -2,19 +2,22 @@
 services:
   webtop:
     image: lscr.io/linuxserver/webtop:arch-xfce
-    container_name: webtop-arch-xfce
+    container_name: webtop
+    security_opt:
+      - seccomp:unconfined #optional
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Asia/Kolkata
     volumes:
-      - ~/Docker/webtop/data:/rootfs
+      - /data:/config
+      - /var/run/docker.sock:/var/run/docker.sock #optional
     ports:
-      - 37079:3000
-      - 32848:3001
+      - 3000:3002
+      - 3001:3001
     devices:
-      - /dev/dri:/dev/dri
-    shm_size: "1gb"
+      - /dev/dri:/dev/dri #optional
+    shm_size: "1gb" #optional
     restart: unless-stopped
     deploy:
       resources:
