@@ -1,4 +1,3 @@
-It looks like you're running into a couple of issues on Arch Linux. Let's address them one by one.
 
 ### Issue 1: `nvidia-ctk` command not found
 The `nvidia-ctk` command is part of the NVIDIA Container Toolkit. To install it on Arch Linux, you can follow these steps:
