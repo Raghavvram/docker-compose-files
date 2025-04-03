@@ -1,0 +1,14 @@
+services:
+  kasmweb-desktop:
+    image: kasmweb/desktop:1.16.0
+    ports:
+      - "6901:6901"
+    environment:
+      - VNC_PW=mk
+    shm_size: '1g'
+    volumes:
+      - /config:/home/kasm-user
+    network_mode: host
+    devices:
+      - /dev/video0:/dev/video0
+      - /dev/snd:/dev/snd
